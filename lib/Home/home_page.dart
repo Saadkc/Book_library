@@ -1,6 +1,5 @@
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
-import 'package:reading_book/Custom_widgets/custom_appbar.dart';
 import 'package:reading_book/Custom_widgets/custom_scaffold.dart';
 
 class Homepage extends StatefulWidget {
@@ -10,6 +9,7 @@ class Homepage extends StatefulWidget {
 
 class _HomepageState extends State<Homepage> {
   List<Widget> items = [
+
     ListTile(
       leading: Icon(
         Icons.library_books,
@@ -18,6 +18,7 @@ class _HomepageState extends State<Homepage> {
       title: Text("Semister 1"),
       subtitle: Text("Tap tp open Books"),
     ),
+  
     ListTile(
       leading: Icon(
         Icons.library_books,
@@ -81,15 +82,13 @@ class _HomepageState extends State<Homepage> {
     var divheight = MediaQuery.of(context).size.height;
     return SafeArea(
       child: CustomScaffold(
-        index: null,
-        body: CustomAppBAr(
-          height: divheight /2 * 0.9,
+        index: 0,
+          height: divheight / 2 * 0.9,
           image: imageSliderCarousel,
-          body: ListWheelScrollView(
-            itemExtent: 100,
-            children: items,
-            useMagnifier: true,
-          ),
+        body: ListWheelScrollView(
+          itemExtent: 100,
+          children: items,
+          useMagnifier: true,
         ),
       ),
     );
@@ -100,7 +99,7 @@ Widget imageSliderCarousel = Container(
   child: Column(
     children: <Widget>[
       Container(
-        height: 150,
+        height: 160,
         child: Carousel(
           boxFit: BoxFit.cover,
           images: [
