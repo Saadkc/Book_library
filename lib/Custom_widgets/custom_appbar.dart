@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 class CustomAppBAr extends StatelessWidget implements PreferredSizeWidget {
   final Widget image;
   final double height;
+  final Widget search;
+  final Widget onpressed;
 
-  CustomAppBAr({this.image, this.height, Key key}) : super(key: key);
+  CustomAppBAr({this.onpressed,this.search, this.image, this.height, Key key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -52,6 +55,14 @@ class CustomAppBAr extends StatelessWidget implements PreferredSizeWidget {
                       ),
                     ),
                   ),
+                  Container(
+                    child: IconButton(
+                    icon: Icon(Icons.adjust,color: Colors.white,), 
+                    onPressed: (){
+                      
+                    },
+                    ),
+                  ),
                 ],
               ),
             ],
@@ -66,6 +77,14 @@ class CustomAppBAr extends StatelessWidget implements PreferredSizeWidget {
             child: image,
           ),
         ),
+        Positioned(
+          top: 80.0,
+          child: Container(
+            height: 70,
+            width: divwidth -20,
+            child: search,
+          ),
+        ),
       ],
     );
   }
@@ -73,16 +92,3 @@ class CustomAppBAr extends StatelessWidget implements PreferredSizeWidget {
   @override
   Size get preferredSize => Size.fromHeight(height);
 }
-
-// Widget _buildMenu(){
-//   return ClipPath(
-//     clipper: OvalRightBorderClipper(),
-//     child: Drawer(
-//       child: Container(
-//         decoration: BoxDecoration(
-//           color: Colors.red,
-//         ),
-//       ),
-//     ),
-//   );
-// }

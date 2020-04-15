@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:reading_book/Home/home_page.dart';
+import 'package:reading_book/Intro_Screen/intro_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,8 +12,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.purple,
+        brightness: Brightness.light,
       ),
-      home: Homepage(),
+      home: OnBoardingScreen(),
     );
   }
 }

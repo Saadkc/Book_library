@@ -7,10 +7,11 @@ class CustomScaffold extends StatelessWidget {
   final Widget body;
   final double height;
   final Widget image;
+  final Widget search;
 
   final int index;
 
-  CustomScaffold({@required this.body,this.image,this.height,@required this.index});
+  CustomScaffold({this.search,@required this.body,this.image,this.height,@required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +19,11 @@ class CustomScaffold extends StatelessWidget {
         appBar:  CustomAppBAr(
           height: height,
           image: image,
+          search: search,
         ),
         body: body,
 
-        drawer: buildDrawer(),
+        drawer: BuildDrawer(),
 
         floatingActionButton: FloatingActionButton(
           onPressed: (){},
