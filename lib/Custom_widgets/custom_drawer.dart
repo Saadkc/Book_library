@@ -15,6 +15,7 @@ class _BuildDrawerState extends State<BuildDrawer> {
         child: Container(
           padding: const EdgeInsets.only(left: 16.0, right: 40),
           decoration: BoxDecoration(
+            image: DecorationImage(image: AssetImage("assets/images/download.png")),
             gradient: LinearGradient(colors: [
               Colors.deepPurple,
               Colors.black,
@@ -24,17 +25,7 @@ class _BuildDrawerState extends State<BuildDrawer> {
           child: SafeArea(
             child: Column(
               children: <Widget>[
-                Container(
-                  alignment: Alignment.centerRight,
-                  child: IconButton(
-                      color: Colors.deepPurple,
-                      icon: Icon(
-                        Icons.power_settings_new,
-                        size: 35,
-                      ),
-                      onPressed: () {}),
-                ),
-                SizedBox(height: 20.0),
+                SizedBox(height: 40.0),
                 Container(
                   height: 90,
                   alignment: Alignment.center,

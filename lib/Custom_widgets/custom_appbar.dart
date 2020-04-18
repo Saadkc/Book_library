@@ -4,9 +4,8 @@ class CustomAppBAr extends StatelessWidget implements PreferredSizeWidget {
   final Widget image;
   final double height;
   final Widget search;
-  final Widget onpressed;
-
-  CustomAppBAr({this.onpressed,this.search, this.image, this.height, Key key})
+  final double width;
+  CustomAppBAr({this.width,this.search, this.image, this.height, Key key})
       : super(key: key);
 
   @override
@@ -17,14 +16,17 @@ class CustomAppBAr extends StatelessWidget implements PreferredSizeWidget {
       children: <Widget>[
         Container(
           height: height,
-          width: divwidth,
+          width: width,
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(color: Colors.black, blurRadius: 5.0),
             ],
-            gradient: LinearGradient(colors: [
-              Colors.deepPurple,
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
               Colors.black,
+              Colors.deepPurple,
             ]),
             borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(0.0),
@@ -47,20 +49,12 @@ class CustomAppBAr extends StatelessWidget implements PreferredSizeWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      "Ssuet Book Library",
+                      "SSUET Book Library",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 25.0,
                         fontWeight: FontWeight.bold,
                       ),
-                    ),
-                  ),
-                  Container(
-                    child: IconButton(
-                    icon: Icon(Icons.adjust,color: Colors.white,), 
-                    onPressed: (){
-                      
-                    },
                     ),
                   ),
                 ],

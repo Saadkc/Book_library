@@ -42,13 +42,25 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               SizedBox(
                 height: 20.0,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Text("This Application is Just for help of Students",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20.0,
-                        color: Colors.white54)),
+              Column(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Text("This Application is Just for the",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20.0,
+                            color: Colors.white54)),
+                  ),
+                  SizedBox(
+                    height: 3.0,
+                  ),
+                  Text("help of Students",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.0,
+                          color: Colors.white54)),
+                ],
               ),
               SizedBox(
                 height: 50.0,
@@ -63,7 +75,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       child: RaisedButton(
                         onPressed: () {
                           Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(builder: (context) => Homepage()));
+                              MaterialPageRoute(
+                                  builder: (context) => Homepage()));
                         },
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(18.0),
@@ -79,7 +92,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       child: RaisedButton(
                         onPressed: () {
                           Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(builder: (context) => Screen1()));
+                              MaterialPageRoute(
+                                  builder: (context) => Screen1()));
                         },
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(18.0),

@@ -20,7 +20,7 @@ class CustomBottomAppBar extends StatelessWidget {
                   Icons.home,
                   size: 35,
                   color: index == 0
-                      ? Colors.deepPurpleAccent
+                      ? Colors.deepPurple
                       : Colors.grey,
                 ),
                 onPressed: () {
@@ -34,7 +34,7 @@ class CustomBottomAppBar extends StatelessWidget {
             child: IconButton(
               icon: Icon(Icons.library_books,
               color: index == 1 
-              ? Colors.deepPurpleAccent 
+              ? Colors.deepPurple 
               : Colors.grey,
               ), 
               onPressed: (){
