@@ -35,3 +35,7 @@ lib/generated_plugin_registrant.dart
 
 # Exceptions to above rules.
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+assets/images/C1.jpeg
+assets/images/download.png
+assets/images/L1.png
+assets/images/L2.jpg
