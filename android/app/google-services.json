@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "539738929809",
+    "firebase_url": "https://reading-book-d870c.firebaseio.com",
+    "project_id": "reading-book-d870c",
+    "storage_bucket": "reading-book-d870c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539738929809:android:8dfba20e3f8b39c6c6dd30",
+        "android_client_info": {
+          "package_name": "com.example.reading_book"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "539738929809-mji3f0kn09svb550mr4oisemhoh268d1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxbqGcglHfnTzzpcjtV-K3vj1w7TStCsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "539738929809-mji3f0kn09svb550mr4oisemhoh268d1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
