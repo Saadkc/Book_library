@@ -15,7 +15,6 @@ class _BuildDrawerState extends State<BuildDrawer> {
         child: Container(
           padding: const EdgeInsets.only(left: 16.0, right: 40),
           decoration: BoxDecoration(
-            image: DecorationImage(image: AssetImage("assets/images/download.png")),
             gradient: LinearGradient(colors: [
               Colors.deepPurple,
               Colors.black,
@@ -40,7 +39,7 @@ class _BuildDrawerState extends State<BuildDrawer> {
                         "https://drive.google.com/uc?id=1qi3Nc1yWNtqHUg2W6OoDVaJvDSrZ9TWT"),
                     radius: 40,
                   ),
-                ),
+                 ),
                 SizedBox(
                   height: 10.0,
                 ),

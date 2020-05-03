@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reading_book/Books.dart/books.dart';
 import 'package:reading_book/Custom_widgets/custom_appbar.dart';
 import 'package:reading_book/Custom_widgets/custom_bottomappbar.dart';
 import 'package:reading_book/Custom_widgets/custom_drawer.dart';
@@ -13,7 +14,13 @@ class CustomScaffold extends StatelessWidget {
   final int index;
 
   const CustomScaffold(
-      {Key key, this.body,this.width, this.height, this.image, this.search, this.index})
+      {Key key,
+      this.body,
+      this.width,
+      this.height,
+      this.image,
+      this.search,
+      this.index})
       : super(key: key);
 
   @override
@@ -30,7 +37,10 @@ class CustomScaffold extends StatelessWidget {
       drawer: BuildDrawer(),
 
       floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => FindBooks()));
+          },
           backgroundColor: Colors.deepPurple,
           child: Icon(Icons.search)),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
