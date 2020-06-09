@@ -20,7 +20,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [Colors.black, Colors.deepPurple],
+              colors: [Colors.black, Colors.blue],
             ),
           ),
           child: Column(
@@ -40,7 +40,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 ),
               ),
               SizedBox(
-                height: 20.0,
+                height: 10.0,
               ),
               Column(
                 children: <Widget>[
@@ -60,10 +60,26 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           fontWeight: FontWeight.bold,
                           fontSize: 20.0,
                           color: Colors.white54)),
+                  SizedBox(
+                    height: 3.0,
+                  ),
+                  Text("If Students have any issue in books",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.0,
+                          color: Colors.white54)),
+                  SizedBox(
+                    height: 3.0,
+                  ),
+                  Text("reach me at instagram page",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.0,
+                          color: Colors.white54)),
                 ],
               ),
               SizedBox(
-                height: 50.0,
+                height: 30.0,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),

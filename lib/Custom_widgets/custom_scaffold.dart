@@ -41,7 +41,7 @@ class CustomScaffold extends StatelessWidget {
             Navigator.of(context).pushReplacement(
             MaterialPageRoute(builder: (context) => FindBooks()));
           },
-          backgroundColor: Colors.deepPurple,
+          backgroundColor: Colors.blue,
           child: Icon(Icons.search)),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: CustomBottomAppBar(index: index),

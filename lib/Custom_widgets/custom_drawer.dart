@@ -16,7 +16,7 @@ class _BuildDrawerState extends State<BuildDrawer> {
           padding: const EdgeInsets.only(left: 16.0, right: 40),
           decoration: BoxDecoration(
             gradient: LinearGradient(colors: [
-              Colors.deepPurple,
+              Colors.blue,
               Colors.black,
             ]),
           ),

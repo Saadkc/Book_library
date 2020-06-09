@@ -20,7 +20,7 @@ class CustomBottomAppBar extends StatelessWidget {
                   Icons.home,
                   size: 35,
                   color: index == 0
-                      ? Colors.deepPurple
+                      ? Colors.blue
                       : Colors.grey,
                 ),
                 onPressed: () {

@@ -14,7 +14,7 @@ class Screen1 extends StatelessWidget {
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [Colors.black, Colors.deepPurple],
+              colors: [Colors.black, Colors.blue],
             ),
           ),
           child: Column(

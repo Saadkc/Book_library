@@ -26,7 +26,7 @@ class CustomAppBAr extends StatelessWidget implements PreferredSizeWidget {
               end: Alignment.bottomCenter,
               colors: [
               Colors.black,
-              Colors.deepPurple,
+              Colors.blue,
             ]),
             borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(0.0),
