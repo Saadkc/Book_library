@@ -19,7 +19,9 @@ class Screen1 extends StatelessWidget {
           ),
           child: Column(
             children: <Widget>[
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               Container(
                 height: divheight / 2,
                 width: divwidth - 100,
@@ -28,17 +30,32 @@ class Screen1 extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 60),
                   child: Container(
                     decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage("assets/images/L3.png"),
-                        fit: BoxFit.fill,
+                        image: DecorationImage(
+                          image: AssetImage("assets/images/Logo2.jpeg"),
+                          fit: BoxFit.fill,
                         ),
                         borderRadius: BorderRadius.circular(50.0),
-                        shape: BoxShape.rectangle
-                    ),
+                        shape: BoxShape.rectangle),
                     height: divheight / 2,
                   ),
                 ),
               ),
+              SizedBox(
+                height: 3.0,
+              ),
+              Text("If Students have any issue in books",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.0,
+                      color: Colors.white54)),
+              SizedBox(
+                height: 3.0,
+              ),
+              Text("reach me at instagram page",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.0,
+                      color: Colors.white54)),
               SizedBox(
                 height: 50.0,
               ),

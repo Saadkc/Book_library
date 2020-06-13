@@ -60,69 +60,53 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           fontWeight: FontWeight.bold,
                           fontSize: 20.0,
                           color: Colors.white54)),
-                  SizedBox(
-                    height: 3.0,
+                          SizedBox(
+                            height: 50.0,
+                          ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Container(
+                          child: RaisedButton(
+                            onPressed: () {
+                              Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                      builder: (context) => Homepage()));
+                            },
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                            ),
+                            child: Text(
+                              "Skip",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            color: Colors.black,
+                          ),
+                        ),
+                        Container(
+                          child: RaisedButton(
+                            onPressed: () {
+                              Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                      builder: (context) => Screen1()));
+                            },
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                            ),
+                            child: Text(
+                              "Next",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                  Text("If Students have any issue in books",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20.0,
-                          color: Colors.white54)),
-                  SizedBox(
-                    height: 3.0,
-                  ),
-                  Text("reach me at instagram page",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20.0,
-                          color: Colors.white54)),
                 ],
-              ),
-              SizedBox(
-                height: 30.0,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Container(
-                      child: RaisedButton(
-                        onPressed: () {
-                          Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                  builder: (context) => Homepage()));
-                        },
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0),
-                        ),
-                        child: Text(
-                          "Skip",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        color: Colors.black,
-                      ),
-                    ),
-                    Container(
-                      child: RaisedButton(
-                        onPressed: () {
-                          Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                  builder: (context) => Screen1()));
-                        },
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0),
-                        ),
-                        child: Text(
-                          "Next",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        color: Colors.black,
-                      ),
-                    ),
-                  ],
-                ),
               ),
             ],
           ),

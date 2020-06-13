@@ -2,10 +2,10 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:reading_book/Custom_widgets/custom_scaffold.dart';
 import 'package:reading_book/pdf/fetch_pdf_firebase.dart';
-
-String file = "pdf/L3.pdf";
-String fileName = "Flutter Slides";
-
+bool value = true;
+ 
+String file = "Semister1/Calculus.pdf" ;
+ 
 class FindBooks extends StatefulWidget {
   @override
   _FindBooksState createState() => _FindBooksState();
@@ -73,9 +73,8 @@ class _FindBooksState extends State<FindBooks> {
                 child: ListTile(
                   leading: Container(
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10.0),
                       child: InkWell(
-                        child: Image.asset('assets/images/book1.jpg'),
+                        child: Image.asset('assets/images/book3.jpg'),
                         onTap: () => LaunchFile.launchPDF(
                         context, "Flutter Slides", pathPDF),
                        ),
@@ -86,7 +85,9 @@ class _FindBooksState extends State<FindBooks> {
                     style: TextStyle(fontSize: 20),
                   ),
                   subtitle: Text("Rating"),
-                  trailing: openPDFButton(context),
+                  onTap: () => LaunchFile.launchPDF(
+                        context, "Flutter Slides", pathPDF),
+                  // trailing: openPDFButton(context),
                 ),
               ),
             ),
@@ -120,14 +121,3 @@ class _FindBooksState extends State<FindBooks> {
     );
   }
 }
-
-//  Center(
-//         child: RaisedButton(
-//             child: Text("Open PDF"),
-//             onPressed: () {
-//               LaunchFile.launchPDF(context, "Flutter Slides", pathPDF);
-//             }),
-//       ),
-//     );
-//   }
-// }
