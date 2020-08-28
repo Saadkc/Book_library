@@ -2,9 +2,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:reading_book/Custom_widgets/custom_scaffold.dart';
 import 'package:reading_book/pdf/fetch_pdf_firebase.dart';
-bool value = true;
  
-String file = "Semister1/Calculus.pdf" ;
+String file = "Semister1/";
  
 class FindBooks extends StatefulWidget {
   @override
@@ -13,6 +12,8 @@ class FindBooks extends StatefulWidget {
 
 class _FindBooksState extends State<FindBooks> {
   static String pathPDF = "";
+
+  double _height, _width;
 
   @override
   void initState() {
@@ -34,13 +35,15 @@ class _FindBooksState extends State<FindBooks> {
 
   @override
   Widget build(BuildContext context) {
+    _height = MediaQuery.of(context).size.height;
+    _width = MediaQuery.of(context).size.width;
     return SafeArea(
       child: CustomScaffold(
-        height: MediaQuery.of(context).size.height / 4.6,
+        height: _height / 2 * 0.45,
         width: double.infinity,
         index: 1,
         search: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          padding: EdgeInsets.symmetric(horizontal: _width * 0.05, vertical: _height * 0.02),
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(50.0),
@@ -49,15 +52,15 @@ class _FindBooksState extends State<FindBooks> {
             child: TextFormField(
               decoration: InputDecoration(
                 icon: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding:  EdgeInsets.only(left: _width * 0.035),
                   child: Icon(
                     Icons.search,
                     color: Colors.black,
-                    size: 30,
+                    size: _width * 0.06,
                   ),
                 ),
                 hintText: "Seach Books not available yet",
-                contentPadding: const EdgeInsets.only(left: 10.0),
+                contentPadding:  EdgeInsets.only(left: _width * 0.0,bottom: _height * 0.0015),
                 border: InputBorder.none,
               ),
             ),
@@ -66,10 +69,10 @@ class _FindBooksState extends State<FindBooks> {
         body: ListView(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding:  EdgeInsets.symmetric(vertical: _height * 0.02, horizontal: _width *  0.05),
               child: Card(
                 elevation: 10,
-                margin: EdgeInsets.symmetric(vertical: 5),
+                margin: EdgeInsets.symmetric(vertical: _width * 0.02),
                 child: ListTile(
                   leading: Container(
                     child: ClipRRect(
@@ -82,7 +85,7 @@ class _FindBooksState extends State<FindBooks> {
                   ),
                   title: Text(
                     "Calculus",
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(fontSize: _width * 0.05),
                   ),
                   subtitle: Text("Rating"),
                   onTap: () => LaunchFile.launchPDF(
@@ -102,7 +105,7 @@ class _FindBooksState extends State<FindBooks> {
       child: Stack(
         children: <Widget>[
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 5.0),
+            padding:  EdgeInsets.symmetric(horizontal: _width * 0.05),
             color: Colors.blue,
             child: FlatButton(
               onPressed: () {
@@ -112,7 +115,7 @@ class _FindBooksState extends State<FindBooks> {
               },
               child: Text(
                 "Open pdf",
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: _width * 0.05),
               ),
             ),
           ),

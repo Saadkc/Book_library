@@ -7,26 +7,30 @@ class BuildDrawer extends StatefulWidget {
 }
 
 class _BuildDrawerState extends State<BuildDrawer> {
+double _height , _width;
+
   @override
   Widget build(BuildContext context) {
+    _height = MediaQuery.of(context).size.height;
+    _width = MediaQuery.of(context).size.width;
     return ClipPath(
       clipper: OvalRightBorderClipper(),
       child: Drawer(
         child: Container(
-          padding: const EdgeInsets.only(left: 16.0, right: 40),
+          padding:  EdgeInsets.only(left: _width * 0.04, right: _width * 0.05),
           decoration: BoxDecoration(
             gradient: LinearGradient(colors: [
               Colors.blue,
               Colors.black,
             ]),
           ),
-          width: 300,
+          width: _width * 0.05,
           child: SafeArea(
             child: Column(
               children: <Widget>[
-                SizedBox(height: 40.0),
+                SizedBox(height: _height * 0.09),
                 Container(
-                  height: 90,
+                  height: _height * 0.13,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
@@ -41,29 +45,29 @@ class _BuildDrawerState extends State<BuildDrawer> {
                   ),
                  ),
                 SizedBox(
-                  height: 10.0,
+                  height: _height * 0.01,
                 ),
                 Text(
                   "SaAd Ali",
                   style: TextStyle(
-                      fontSize: 25,
+                      fontSize: _width * 0.05,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
                 ),
                 SizedBox(
-                  height: 50.0,
+                  height: _height * 0.09,
                 ),
                 Text(
                   "Follow on instagram",
                   style: TextStyle(
-                      fontSize: 25,
+                      fontSize: _width * 0.05,
                       //fontWeight: FontWeight.bold,
                       color: Colors.purpleAccent),
                 ),
                 Text(
                   "@Coder Pk",
                   style: TextStyle(
-                      fontSize: 25,
+                      fontSize: _width * 0.05,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
                 )

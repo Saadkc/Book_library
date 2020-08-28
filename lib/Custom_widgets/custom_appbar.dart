@@ -38,7 +38,7 @@ class CustomAppBAr extends StatelessWidget implements PreferredSizeWidget {
                 children: <Widget>[
                   Padding(
                     padding:
-                        const EdgeInsets.symmetric(vertical: 20, horizontal: 5),
+                         EdgeInsets.symmetric(vertical: divheight * 0.025, horizontal: divwidth * 0.027),
                     child: IconButton(
                         color: Colors.white,
                         icon: Icon(Icons.menu),
@@ -52,7 +52,7 @@ class CustomAppBAr extends StatelessWidget implements PreferredSizeWidget {
                       "SSUET Book Library",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 25.0,
+                        fontSize: divwidth * 0.07,
                         fontWeight: FontWeight.bold,
                       ),
                     ),

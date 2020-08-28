@@ -9,237 +9,44 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  @override
-  Widget build(BuildContext context) {
-    var divheight = MediaQuery.of(context).size.height;
-    return SafeArea(
-      child: CustomScaffold(
-        index: 0,
-        width: double.infinity,
-        height: divheight / 2 * 0.9,
-        image: imageSliderCarousel,
-        body: ListView(
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 16),
-              child: Card(
-                elevation: 8,
-                color: Colors.grey,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.library_books,
-                    size: 40,
-                    color: Colors.black,
-                  ),
-                  title: Text("Semester 1" ,style: TextStyle(fontWeight: FontWeight.bold),),
-                  subtitle: Text("Tap to find books" , style: TextStyle(color: Colors.black),),
-                  trailing: Icon(
-                    Icons.fast_forward,
-                    size: 20,
-                    color: Colors.black,
-                  ),
-                  onTap: (){
-                    Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => FindBooks()));
-                  },
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 16),
-              child: Card(
-                elevation: 8,
-                color: Colors.grey,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.library_books,
-                    size: 40,
-                    color: Colors.black,
-                  ),
-                  title: Text("Semester 2" ,style: TextStyle(fontWeight: FontWeight.bold),),
-                  subtitle: Text("Tap to find books" , style: TextStyle(color: Colors.black),),
-                  trailing: Icon(
-                    Icons.fast_forward,
-                    size: 20,
-                    color: Colors.black,
-                  ),
-                  onTap: (){
-                    Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => FindBooks()));
-                  },
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 16),
-              child: Card(
-                elevation: 8,
-                color: Colors.grey,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.library_books,
-                    size: 40,
-                    color: Colors.black,
-                  ),
-                  title: Text("Semester 3" ,style: TextStyle(fontWeight: FontWeight.bold),),
-                  subtitle: Text("Tap to find books" , style: TextStyle(color: Colors.black),),
-                  trailing: Icon(
-                    Icons.fast_forward,
-                    size: 20,
-                    color: Colors.black,
-                  ),
-                  onTap: (){
-                    Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => FindBooks()));
-                  },
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 16),
-              child: Card(
-                elevation: 8,
-                color: Colors.grey,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.library_books,
-                    size: 40,
-                    color: Colors.black,
-                  ),
-                  title: Text("Semester 4" ,style: TextStyle(fontWeight: FontWeight.bold),),
-                  subtitle: Text("Tap to find books" , style: TextStyle(color: Colors.black),),
-                  trailing: Icon(
-                    Icons.fast_forward,
-                    size: 20,
-                    color: Colors.black,
-                  ),
-                  onTap: (){
-                    Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => FindBooks()));
-                  },
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 16),
-              child: Card(
-                elevation: 8,
-                color: Colors.grey,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.library_books,
-                    size: 40,
-                    color: Colors.black,
-                  ),
-                  title: Text("Semester 5" ,style: TextStyle(fontWeight: FontWeight.bold),),
-                  subtitle: Text("Tap to find books" , style: TextStyle(color: Colors.black),),
-                  trailing: Icon(
-                    Icons.fast_forward,
-                    size: 20,
-                    color: Colors.black,
-                  ),
-                  onTap: (){
-                    Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => FindBooks()));
-                  },
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 16),
-              child: Card(
-                elevation: 8,
-                color: Colors.grey,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.library_books,
-                    size: 40,
-                    color: Colors.black,
-                  ),
-                  title: Text("Semester 6" ,style: TextStyle(fontWeight: FontWeight.bold),),
-                  subtitle: Text("Tap to find books" , style: TextStyle(color: Colors.black),),
-                  trailing: Icon(
-                    Icons.fast_forward,
-                    size: 20,
-                    color: Colors.black,
-                  ),
-                  onTap: (){
-                    Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => FindBooks()));
-                  },
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 16),
-              child: Card(
-                elevation: 8,
-                color: Colors.grey,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.library_books,
-                    size: 40,
-                    color: Colors.black,
-                  ),
-                  title: Text("Semester 7" ,style: TextStyle(fontWeight: FontWeight.bold),),
-                  subtitle: Text("Tap to find books" , style: TextStyle(color: Colors.black),),
-                  trailing: Icon(
-                    Icons.fast_forward,
-                    size: 20,
-                    color: Colors.black,
-                  ),
-                  onTap: (){
-                    Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => FindBooks()));
-                  },
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 16),
-              child: Card(
-                elevation: 8,
-                color: Colors.grey,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.library_books,
-                    size: 40,
-                    color: Colors.black,
-                  ),
-                  title: Text("Semester 8" ,style: TextStyle(fontWeight: FontWeight.bold),),
-                  subtitle: Text("Tap to find books" , style: TextStyle(color: Colors.black),),
-                  trailing: Icon(
-                    Icons.fast_forward,
-                    size: 20,
-                    color: Colors.black,
-                  ),
-                  onTap: (){
-                    Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => FindBooks()));
-                  },
-                ),
-              ),
-            ),
-          ],
+  double _height, _width;
+
+  Widget customCard(Icon icon, String text, String subtext, Icon icons) {
+    return Padding(
+      padding: EdgeInsets.symmetric(
+          vertical: _height * 0.01, horizontal: _width * 0.05),
+      child: Card(
+        elevation: 8,
+        color: Colors.grey,
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),
+        child: ListTile(
+          leading: icon,
+          title: Text(
+            "$text",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          subtitle: Text(
+            "$subtext",
+            style: TextStyle(color: Colors.black),
+          ),
+          trailing: icons,
+          onTap: () {
+            Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => FindBooks()));
+          },
         ),
       ),
     );
   }
-}
 
-Widget imageSliderCarousel = Container(
+  Widget imageSliderCarousel (){
+  return Container(
   child: Column(
     children: <Widget>[
       Container(
-        height: 160,
+        height: _height * 0.30,
+        width: _width,
         child: Carousel(
           boxFit: BoxFit.cover,
           images: [
@@ -255,5 +62,65 @@ Widget imageSliderCarousel = Container(
     ],
   ),
 );
+}
 
-//
+
+  @override
+  Widget build(BuildContext context) {
+    _height = MediaQuery.of(context).size.height;
+    _width = MediaQuery.of(context).size.width;
+    return SafeArea(
+      child: CustomScaffold(
+        index: 0,
+        width: double.infinity,
+        height: _height / 2 * 0.9,
+        image: imageSliderCarousel(),
+        body: ListView(
+          children: <Widget>[
+            customCard(Icon(
+                    Icons.library_books,
+                    size: _width * 0.09,
+                    color: Colors.black,
+                  ), "Semister 1", "Tap to open book", Icon(Icons.search)),
+            customCard(Icon(
+                    Icons.library_books,
+                    size: _width * 0.09,
+                    color: Colors.black,
+                  ), "Semister 2", "Tap to open book", Icon(Icons.search)),
+            customCard(Icon(
+                    Icons.library_books,
+                    size: _width * 0.09,
+                    color: Colors.black,
+                  ), "Semister 3", "Tap to open book", Icon(Icons.search)),
+            customCard(Icon(
+                    Icons.library_books,
+                    size: _width * 0.09,
+                    color: Colors.black,
+                  ), "Semister 4", "Tap to open book", Icon(Icons.search)),
+            customCard(Icon(
+                    Icons.library_books,
+                    size: _width * 0.09,
+                    color: Colors.black,
+                  ), "Semister 5", "Tap to open book", Icon(Icons.search)),
+            customCard(Icon(
+                    Icons.library_books,
+                    size: _width * 0.09,
+                    color: Colors.black,
+                  ), "Semister 6", "Tap to open book", Icon(Icons.search)),
+            customCard(Icon(
+                    Icons.library_books,
+                    size: _width * 0.09,
+                    color: Colors.black,
+                  ), "Semister 7", "Tap to open book", Icon(Icons.search)),
+            customCard(Icon(
+                    Icons.library_books,
+                    size: _width * 0.09,
+                    color: Colors.black,
+                  ), "Semister 8", "Tap to open book", Icon(Icons.search)),
+          ],
+        ),
+      ),
+    );
+  }
+}
+

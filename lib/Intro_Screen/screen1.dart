@@ -31,7 +31,7 @@ class Screen1 extends StatelessWidget {
                   child: Container(
                     decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage("assets/images/Logo2.jpeg"),
+                          image: AssetImage("assets/images/Logo.png"),
                           fit: BoxFit.fill,
                         ),
                         borderRadius: BorderRadius.circular(50.0),

@@ -8,14 +8,39 @@ class OnBoardingScreen extends StatefulWidget {
 }
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
+  final int _numPages = 2;
+  final PageController _pageController = PageController(initialPage: 0);
+  int currentpage = 0;
+  List<Widget> _buildPageIndicator(){
+    List<Widget> list = [];
+  for (int i = 0; i < _numPages; i++){
+    list.add(i == currentpage ? _indicator(true) : _indicator(false));
+  }
+  }
+
+  Widget _indicator (bool isActive){
+    return AnimatedContainer(
+      duration: Duration(milliseconds: 150),
+      margin: EdgeInsets.symmetric(horizontal: 8.0),
+      height: 8.0,
+      width: isActive ? 24.0 : 16.0,
+      decoration: BoxDecoration(
+        color: isActive ? Color.fromRGBO(179, 210, 21, 1) : Colors.grey,
+        borderRadius: BorderRadius.all(Radius.circular(12)),
+      ),
+    );
+  }
+
+  double _height;
+  double _width;
   @override
   Widget build(BuildContext context) {
-    var divheight = MediaQuery.of(context).size.height;
-    var divwidth = MediaQuery.of(context).size.width;
+    _height = MediaQuery.of(context).size.height;
+    _width = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
         body: Container(
-          height: divheight,
+          height: _height,
           decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,
@@ -30,8 +55,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 child: Padding(
                   padding: const EdgeInsets.only(top: 80),
                   child: Container(
-                    height: divheight / 2,
-                    width: divwidth,
+                    height: _height / 2,
+                    width: _width,
                     child: Image.asset(
                       'assets/images/Logo1.png',
                       fit: BoxFit.contain,
